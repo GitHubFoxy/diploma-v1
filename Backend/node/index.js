@@ -35,7 +35,6 @@ const createPosts = async () => {
 mongoose.connect("mongodb+srv://root:ZZyqJzEwotcPUeKz@cluster0.jsjc5yt.mongodb.net/crud?retryWrites=true&w=majority&appName=Cluster0")
 .then(() => {
   console.log("Connected to mongo")
-  // createPosts()
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
   })
