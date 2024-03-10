@@ -1,0 +1,22 @@
+<div class="absolute right-0 bottom-0 -translate-x-4 -translate-y-1/2
+h-10 aspect-square rounded-full bg-zinc-700 dark:bg-zinc-100
+transition-opacity
+cursor-pointer
+opacity-25
+hover:opacity-100
+"
+id="themeswitcher">
+</div>
+
+<script>
+    window.addEventListener("DOMContentLoaded",() => {
+        localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+    })
+    document.addEventListener("astro:after-swap", () => {
+        localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+    })
+    document.querySelector("#themeswitcher").addEventListener("click", () => {
+        localStorage.setItem("theme", localStorage.getItem("theme") === "dark" ? "light" : "dark");
+        localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+    });
+</script>       

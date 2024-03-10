@@ -1,0 +1,10 @@
+---
+import Layout from "../../../layout/Layout.astro"
+const response = await fetch("http://localhost:3001/", {method:"get"})
+const data = await response.text()  
+---
+<Layout title="nodejs" isActive="node">
+    <div>
+        <h1>data from Nodejs: <pre>{data}</pre></h1>
+    </div>
+</Layout>
