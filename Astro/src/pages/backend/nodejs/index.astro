@@ -1,10 +1,15 @@
 ---
 import Layout from "../../../layout/Layout.astro"
-const response = await fetch("http://localhost:3001/", {method:"get"})
-const data = await response.text()  
+const response = await fetch('http://localhost:3000/posts')
+const data = await response.text()
+
 ---
 <Layout title="nodejs" isActive="node">
-    <div>
-        <h1>data from Nodejs: <pre>{data}</pre></h1>
-    </div>
+        <div class="flex gap-2 flex-col">
+            <h1 class="text-center">Data from Nodejs</h1>
+            <hr class="opacity-30"/>
+            <div class="flex items-center justify-center">
+                <p class="text-center max-w-[100ch]">{data}</p>
+            </div>
+        </div>
 </Layout>
