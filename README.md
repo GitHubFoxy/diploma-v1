@@ -1,4 +1,10 @@
 # Astro project
 
-index page 
+index page
+
 ![](image.png)
+
+React Page
+
+![](image-1.png)
+
