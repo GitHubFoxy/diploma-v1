@@ -11,12 +11,19 @@ id="themeswitcher">
 <script>
     window.addEventListener("DOMContentLoaded",() => {
         localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
-    })
-    document.addEventListener("astro:after-swap", () => {
-        localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
-    })
-    document.querySelector("#themeswitcher").addEventListener("click", () => {
+        document.querySelector("#themeswitcher").addEventListener("click", () => {
         localStorage.setItem("theme", localStorage.getItem("theme") === "dark" ? "light" : "dark");
         localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
     });
+    })
+
+    document.addEventListener("astro:after-swap", () => {
+        localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+        document.querySelector("#themeswitcher").addEventListener("click", () => {
+        localStorage.setItem("theme", localStorage.getItem("theme") === "dark" ? "light" : "dark");
+        localStorage.getItem("theme") === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+    });
+    })
+
+    
 </script>       
