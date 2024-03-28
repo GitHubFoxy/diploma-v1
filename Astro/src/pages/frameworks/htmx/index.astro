@@ -2,6 +2,6 @@
 import Layout from "../../../layout/Layout.astro";
 ---
 <Layout isActive="htmx" title="htmx+php">
-    
-    <h1>htmx</h1>
+    <script src="https://unpkg.com/htmx.org@1.9.11" integrity="sha384-0gxUXCCR8yv9FM2b+U3FDbsKthCI66oH5IA9fHppQq9DDMHuMauqq1ZHBpJxQ0J0" crossorigin="anonymous"></script>
+    <div hx-get="/api/fetchphp" hx-trigger="load"></div>
 </Layout>

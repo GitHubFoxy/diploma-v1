@@ -1,6 +1,7 @@
 ---
+import Posts from "../../../components/svelte/Posts.svelte";
 import Layout from "../../../layout/Layout.astro";
 ---
 <Layout isActive="svelte" title="svelte+bun">
-    <h1>svelte</h1>
+    <Posts client:only="svelte"/>
 </Layout>
