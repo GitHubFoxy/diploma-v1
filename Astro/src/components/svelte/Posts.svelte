@@ -1,6 +1,8 @@
 <script>
+    
 import {data} from '../data.ts'
  export const posts = data
+
 </script>
 <div class="flex flex-col sm:grid sm:grid-cols-4 gap-2">
 {#each data as card}
