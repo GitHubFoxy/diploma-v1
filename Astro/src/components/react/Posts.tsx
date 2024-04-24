@@ -25,6 +25,6 @@ function Posts() {
             </div>
         )
     })
-    return <>{cards}</>
+    return <div className='flex flex-col sm:grid sm:grid-cols-4 gap-2'>{cards}</div>
 }
 export default Posts

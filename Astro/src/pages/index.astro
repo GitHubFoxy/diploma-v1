@@ -3,11 +3,28 @@ import Layout from '../layout/Layout.astro'
 ---
 <Layout isActive='index' title="Выпускная квалификационная работа">
 <div class="grid place-content-center h-full gap-1 text-center">
-    <h1 class="text-center">Добро пожаловать на главную страницу</h1>
-    <p class="text-center">Данная страница была сгенерирована Astro</p>
-    <div class="flex gap-1 flex-col p-2">
-        <label for="" class="flex gap-2">Введите ваш код<input class="rounded" type="text"></label>
-        <label for="" class="flex gap-2 items-center justify-center">Нет кода?<button class="rounded px-2 py-1 bg-zinc-600">Сгенерировать</button></label>
+    <h1 class="text-center text-4xl">Добро пожаловать на главную страницу</h1>
+    <div class="flex gap-2 flex-col p-2 text-center">
+        <label for="" class="flex gap-2 items-center justify-center">Введите ваш код<input id="codeinput" class="rounded text-black px-1" tabindex="0" type="text" value=><button id="checkcode" class="rounded px-2 py-1 bg-zinc-600 transition-colors hover:bg-zinc-500 ">Применить</button></label>
+        <label for="" class="flex gap-2 items-center justify-center">Нет кода?<button id="generatecode" class="rounded px-2 py-1 bg-zinc-600 transition-colors hover:bg-zinc-500 ">Сгенерировать</button></label>
     </div>
 </div>
+<script>
+    const checkcode = document.querySelector("#checkcode") as HTMLButtonElement;
+    const codeinput = document.querySelector("#codeinput") as HTMLInputElement;
+    const generatecode = document.querySelector("#generatecode") as HTMLButtonElement;
+    checkcode.addEventListener('click', () => {
+        if (!codeinput.value.trim() ) {
+            return alert("no value")
+        }
+        alert(codeinput.value)
+    })
+    generatecode.addEventListener('click', () => {
+        if (localStorage.getItem("code")) {
+            return alert(`Already generated ${localStorage.getItem("code")}`)
+        }
+        localStorage.setItem("code", Math.random().toString(36).slice(2,7))
+        alert("generated")
+    })
+</script>
 </Layout>

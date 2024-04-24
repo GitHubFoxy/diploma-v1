@@ -1,0 +1,10 @@
+Frameworkds
+1.  https://react.dev/
+2.  https://www.solidjs.com/
+3.  https://qwik.dev/
+4.  https://svelte.dev/
+5.  https://lit.dev/
+6.  https://htmx.org/
+https://www.youtube.com/watch?v=Hifll_y8-HE CORS
+https://www.youtube.com/watch?v=aq_chBS-OI0 CORS
+
