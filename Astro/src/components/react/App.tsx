@@ -6,7 +6,7 @@ export default function App() {
         <>
             <div className="flex gap-2 flex-col">
                 {/* <ReactFeatures/> */}
-                <Description/>
+                {/* <Description/> */}
                 <Posts/>
             </div>
         </>
